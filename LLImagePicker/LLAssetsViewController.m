@@ -113,7 +113,7 @@ static NSString *LLAssetCellIdentifier = @"LLAssetCell";
     _collectionView.delegate = self;
     _collectionView.dataSource = self;
     _collectionView.backgroundColor = [UIColor whiteColor];
-    [_collectionView registerNib:[UINib nibWithNibName:LLAssetCellIdentifier bundle:nil] forCellWithReuseIdentifier:LLAssetCellIdentifier];
+    [_collectionView registerNib:[UINib nibWithNibName:LLAssetCellIdentifier bundle:LLImagePickerBundle] forCellWithReuseIdentifier:LLAssetCellIdentifier];
     
     if (@available(iOS 11.0, *)) {
         _collectionView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;

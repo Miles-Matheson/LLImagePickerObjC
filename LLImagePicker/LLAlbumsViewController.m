@@ -43,7 +43,7 @@ static NSString *LLAlbumCellIdentifier = @"LLAlbumCell";
     _tableView.delegate = self;
     _tableView.dataSource = self;
     _tableView.separatorStyle = UITableViewCellSeparatorStyleNone;
-    [_tableView registerNib:[UINib nibWithNibName:LLAlbumCellIdentifier bundle:nil] forCellReuseIdentifier:LLAlbumCellIdentifier];
+    [_tableView registerNib:[UINib nibWithNibName:LLAlbumCellIdentifier bundle:LLImagePickerBundle] forCellReuseIdentifier:LLAlbumCellIdentifier];
     if (@available(iOS 11.0, *)) {
         _tableView.contentInsetAdjustmentBehavior = UIScrollViewContentInsetAdjustmentNever;
     } else {

@@ -11,6 +11,8 @@
 #import "LLAlbum.h"
 #import "LLAssetsPickerConfig.h"
 
+#define LLImagePickerBundle [NSBundle bundleWithURL:[[NSBundle bundleForClass:self.class] URLForResource:@"LLImagePicker" withExtension:@"bundle"]]
+
 @interface LLAssetsViewController : UIViewController
 
 @property (nonatomic, strong) LLAlbum *album;
