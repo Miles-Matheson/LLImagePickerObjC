@@ -13,10 +13,9 @@ Pod::Spec.new do |s|
   s.source       = { :git => "https://github.com/kevll/LLImagePickerObjC.git", :tag => "#{s.version}" }
   s.source_files  = "LLImagePicker/*.{h,m}","LLImagePicker/LLPhotoBrowser/*.{h,m}"
   s.exclude_files = "LLImagePicker/LLAssetsPicker.h"
-  s.resource_bundles = { "LLImagePicker" => "LLImagePicker/*.{xib}" }
   s.frameworks       = "Photos"
   s.requires_arc = true
-  s.resources = "LLImagePicker/Resource/*.png"
+  s.resources = "LLImagePicker/Resource/*.png","LLImagePicker/*.{xib}"
   s.dependency "SDWebImage"
   s.dependency "DACircularProgress"
 end
