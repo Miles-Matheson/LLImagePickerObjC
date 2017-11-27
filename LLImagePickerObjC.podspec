@@ -15,7 +15,7 @@ Pod::Spec.new do |s|
   s.exclude_files = "LLImagePicker/LLAssetsPicker.h"
   s.frameworks       = "Photos"
   s.requires_arc = true
-  s.resources = "LLImagePicker/Resource/*.png","LLImagePicker/*.{xib}"
+  s.resources = "LLImagePicker/Resource/*.png"
   s.dependency "SDWebImage"
   s.dependency "DACircularProgress"
 end

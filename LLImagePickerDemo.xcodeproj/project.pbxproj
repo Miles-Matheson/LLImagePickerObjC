@@ -10,10 +10,8 @@
 		03143F171FBC220000DA0573 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 03143F151FBC21FF00DA0573 /* Main.storyboard */; };
 		032920FA1FC6AF8000C4D188 /* LLAlbum.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920CF1FC6AF8000C4D188 /* LLAlbum.m */; };
 		032920FB1FC6AF8000C4D188 /* LLAlbumCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920D11FC6AF8000C4D188 /* LLAlbumCell.m */; };
-		032920FC1FC6AF8000C4D188 /* LLAlbumCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032920D21FC6AF8000C4D188 /* LLAlbumCell.xib */; };
 		032920FD1FC6AF8000C4D188 /* LLAlbumsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920D41FC6AF8000C4D188 /* LLAlbumsViewController.m */; };
 		032920FE1FC6AF8000C4D188 /* LLAssetCell.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920D61FC6AF8000C4D188 /* LLAssetCell.m */; };
-		032920FF1FC6AF8000C4D188 /* LLAssetCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = 032920D71FC6AF8000C4D188 /* LLAssetCell.xib */; };
 		032921001FC6AF8000C4D188 /* LLAssetsViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920DA1FC6AF8000C4D188 /* LLAssetsViewController.m */; };
 		032921011FC6AF8000C4D188 /* LLCheckManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920DD1FC6AF8000C4D188 /* LLCheckManager.m */; };
 		032921021FC6AF8000C4D188 /* LLPhoto.m in Sources */ = {isa = PBXBuildFile; fileRef = 032920DF1FC6AF8000C4D188 /* LLPhoto.m */; };
@@ -53,12 +51,10 @@
 		032920CF1FC6AF8000C4D188 /* LLAlbum.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAlbum.m; sourceTree = "<group>"; };
 		032920D01FC6AF8000C4D188 /* LLAlbumCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAlbumCell.h; sourceTree = "<group>"; };
 		032920D11FC6AF8000C4D188 /* LLAlbumCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAlbumCell.m; sourceTree = "<group>"; };
-		032920D21FC6AF8000C4D188 /* LLAlbumCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLAlbumCell.xib; sourceTree = "<group>"; };
 		032920D31FC6AF8000C4D188 /* LLAlbumsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAlbumsViewController.h; sourceTree = "<group>"; };
 		032920D41FC6AF8000C4D188 /* LLAlbumsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAlbumsViewController.m; sourceTree = "<group>"; };
 		032920D51FC6AF8000C4D188 /* LLAssetCell.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAssetCell.h; sourceTree = "<group>"; };
 		032920D61FC6AF8000C4D188 /* LLAssetCell.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAssetCell.m; sourceTree = "<group>"; };
-		032920D71FC6AF8000C4D188 /* LLAssetCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = LLAssetCell.xib; sourceTree = "<group>"; };
 		032920D81FC6AF8000C4D188 /* LLAssetsPicker.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAssetsPicker.h; sourceTree = "<group>"; };
 		032920D91FC6AF8000C4D188 /* LLAssetsViewController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = LLAssetsViewController.h; sourceTree = "<group>"; };
 		032920DA1FC6AF8000C4D188 /* LLAssetsViewController.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = LLAssetsViewController.m; sourceTree = "<group>"; };
@@ -133,12 +129,10 @@
 				032920CF1FC6AF8000C4D188 /* LLAlbum.m */,
 				032920D01FC6AF8000C4D188 /* LLAlbumCell.h */,
 				032920D11FC6AF8000C4D188 /* LLAlbumCell.m */,
-				032920D21FC6AF8000C4D188 /* LLAlbumCell.xib */,
 				032920D31FC6AF8000C4D188 /* LLAlbumsViewController.h */,
 				032920D41FC6AF8000C4D188 /* LLAlbumsViewController.m */,
 				032920D51FC6AF8000C4D188 /* LLAssetCell.h */,
 				032920D61FC6AF8000C4D188 /* LLAssetCell.m */,
-				032920D71FC6AF8000C4D188 /* LLAssetCell.xib */,
 				032920D81FC6AF8000C4D188 /* LLAssetsPicker.h */,
 				032920D91FC6AF8000C4D188 /* LLAssetsViewController.h */,
 				032920DA1FC6AF8000C4D188 /* LLAssetsViewController.m */,
@@ -315,8 +309,6 @@
 			files = (
 				032921101FC6AF8000C4D188 /* llimagepicker_iclouddownload@2x.png in Resources */,
 				032921091FC6AF8000C4D188 /* llimagepicker_back@3x.png in Resources */,
-				032920FF1FC6AF8000C4D188 /* LLAssetCell.xib in Resources */,
-				032920FC1FC6AF8000C4D188 /* LLAlbumCell.xib in Resources */,
 				0329210E1FC6AF8000C4D188 /* llimagepicker_confirm@2x.png in Resources */,
 				0329210F1FC6AF8000C4D188 /* llimagepicker_confirm@3x.png in Resources */,
 				0329210A1FC6AF8000C4D188 /* llimagepicker_check@2x.png in Resources */,

@@ -11,13 +11,6 @@
 
 @interface LLAlbumCell : UITableViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *btmImgView;
-@property (weak, nonatomic) IBOutlet UIImageView *centerImgView;
-@property (weak, nonatomic) IBOutlet UIImageView *topImgView;
-
-@property (weak, nonatomic) IBOutlet UILabel *titleLbl;
-@property (weak, nonatomic) IBOutlet UILabel *contentLbl;
-
 @property (nonatomic, strong) LLAlbum *album;
 
 @end

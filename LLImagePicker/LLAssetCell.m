@@ -21,33 +21,60 @@
 
 @implementation LLAssetCell
 
-- (void)awakeFromNib {
-    [super awakeFromNib];
-    
+- (id)initWithFrame:(CGRect)frame{
+    if (self = [super initWithFrame:frame]) {
+        [self setupUI];
+    }
+    return self;
+}
+
+- (void)setupUI {
+    _mainImgView = [UIImageView new];
+    [self.contentView addSubview:_mainImgView];
     _mainImgView.userInteractionEnabled = YES;
-    
+
+    _checkedBtn = [UIButton buttonWithType:UIButtonTypeCustom];
+    [self.contentView addSubview:_checkedBtn];
     _checkedBtn.tintColor = [UIColor clearColor];
     _checkedBtn.layer.cornerRadius = 12.5f;
     _checkedBtn.layer.masksToBounds = YES;
+    _checkedBtn.titleLabel.font = [UIFont systemFontOfSize:14];
     [_checkedBtn setTitleColor:[LLAssetsPickerConfig shared].checkedTintColor?:[UIColor whiteColor] forState:UIControlStateSelected];
+    [_checkedBtn addTarget:self action:@selector(clickCheckedBtn:) forControlEvents:UIControlEventTouchUpInside];
     
     _icloudImageView = [[UIImageView alloc] initWithImage:[LLAssetsPickerConfig shared].iCloudDownloadImage?:[UIImage imageNamed:@"llimagepicker_iclouddownload"]];
     [self.contentView addSubview:_icloudImageView];
     _icloudImageView.contentMode = UIViewContentModeCenter;
     _icloudImageView.userInteractionEnabled = YES;
     _icloudImageView.backgroundColor = [UIColor colorWithWhite:0 alpha:0.5];
+    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickIcloudImage)];
+    [_icloudImageView addGestureRecognizer:tap];
+    
+    [self setNeedsUpdateConstraints];
+}
+
+- (void)updateConstraints{
+    [super updateConstraints];
+    _mainImgView.translatesAutoresizingMaskIntoConstraints     = NO;
+    _checkedBtn.translatesAutoresizingMaskIntoConstraints      = NO;
     _icloudImageView.translatesAutoresizingMaskIntoConstraints = NO;
+    NSDictionary *views = NSDictionaryOfVariableBindings(_mainImgView,_checkedBtn);
+    
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[_mainImgView]|" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|[_mainImgView]|" options:0 metrics:nil views:views]];
+    
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:[_checkedBtn(25)]-2.5-|" options:0 metrics:nil views:views]];
+    [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"V:|-2.5-[_checkedBtn(25)]" options:0 metrics:nil views:views]];
+    
     [self.contentView addConstraints:[NSLayoutConstraint constraintsWithVisualFormat:@"H:|[icloudImageView]|" options:0 metrics:nil views:@{@"icloudImageView":_icloudImageView}]];
     NSArray<NSLayoutConstraint *> *constraints = [NSLayoutConstraint constraintsWithVisualFormat:@"V:|[icloudImageView]|" options:0 metrics:nil views:@{@"icloudImageView":_icloudImageView}];
     if (constraints.count > 0) {
         _iCloudViewTopCons = constraints[0];
     }
     [self.contentView addConstraints:constraints];
-    UITapGestureRecognizer *tap = [[UITapGestureRecognizer alloc] initWithTarget:self action:@selector(clickIcloudImage)];
-    [_icloudImageView addGestureRecognizer:tap];
 }
 
-- (IBAction)clickCheckedBtn:(UIButton *)sender {
+- (void)clickCheckedBtn:(UIButton *)sender {
     if (_onClickCheckBtn) {
         _onClickCheckBtn(sender);
     }

@@ -13,8 +13,8 @@
 
 @interface LLAssetCell : UICollectionViewCell
 
-@property (weak, nonatomic) IBOutlet UIImageView *mainImgView;
-@property (weak, nonatomic) IBOutlet UIButton *checkedBtn;
+@property (nonatomic, strong) UIImageView *mainImgView;
+@property (nonatomic, strong) UIButton *checkedBtn;
 
 @property (nonatomic, copy) void(^onClickCheckBtn)(UIButton *checkBtn);
 

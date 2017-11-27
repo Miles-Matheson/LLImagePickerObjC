@@ -9,10 +9,10 @@
 #ifndef LLAssetsPicker_h
 #define LLAssetsPicker_h
 
+#import "LLPhoto.h"
+#import "LLPhotoBrowser.h"
 #import "LLAlbumsViewController.h"
 #import "LLAssetsViewController.h"
-#import "LLPhotoBrowser.h"
-#import "LLPhoto.h"
 #import "LLAssetsPickerConfig.h"
 
 #endif /* LLAssetsPicker_h */
